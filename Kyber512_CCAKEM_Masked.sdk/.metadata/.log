@@ -1,0 +1,84 @@
+!SESSION 2021-08-10 00:13:48.863 -----------------------------------------------
+eclipse.buildId=2019.1
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/work/Kyber512_CCAKEM_Masked/Kyber512_CCAKEM_Masked.sdk
+
+This is a continuation of log file C:\work\Kyber512_CCAKEM_Masked\Kyber512_CCAKEM_Masked.sdk\.metadata\.bak_0.log
+Created Time: 2021-09-09 11:05:00.560
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.560
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.568
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT1 210203344251A]. Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.568
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203344251A" && level==1}], Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.582
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203344251A" && level==1}], Result: [null,      2  xc7vx485t (idcode 23687093 irlen 6 fpga)]. Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.583
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT1 210203344251A" && level == 0}], Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.597
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT1 210203344251A" && level == 0}], Result: [null, ]. Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.597
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.598
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.598
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.600
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.600
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT1 210203344251A"} -index 0], Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.626
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT1 210203344251A"} -index 0], Result: [null, ]. Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.626
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.691
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.691
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT1 210203344251A"} -index 0], Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.716
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT1 210203344251A"} -index 0], Result: [null, ]. Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.717
+!MESSAGE XSCT Command: [dow C:/work/Kyber512_CCAKEM_Masked/Kyber512_CCAKEM_Masked.sdk/Kyber512_CCAKEM/Debug/Kyber512_CCAKEM.elf], Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.809
+!MESSAGE XSCT command with result: [dow C:/work/Kyber512_CCAKEM_Masked/Kyber512_CCAKEM_Masked.sdk/Kyber512_CCAKEM/Debug/Kyber512_CCAKEM.elf], Result: [null, ]. Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.872
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT1 210203344251A"} -index 0], Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.899
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT1 210203344251A"} -index 0], Result: [null, ]. Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.900
+!MESSAGE XSCT Command: [con], Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-09 11:05:00.907
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-2144
+
+!ENTRY com.xilinx.sdk.utils 1 0 2021-09-12 03:06:06.419
+!MESSAGE Executed Webtalk command
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-12 03:06:06.453
+!MESSAGE XSCT Command: [disconnect tcfchan#71], Thread: Thread-3384
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-12 03:06:06.483
+!MESSAGE XSCT command with result: [disconnect tcfchan#71], Result: [null, ]. Thread: Thread-3384

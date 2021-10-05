@@ -1,0 +1,1719 @@
+00:22:48 **** Build of project Kyber512_CCAKEM_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/Kyber512_CCAKEM_IP_v1_0/src"
+make -C microblaze_0/libsrc/Kyber512_CCAKEM_IP_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/Kyber512_CCAKEM_IP_v1_0/src"
+make -C microblaze_0/libsrc/Kyber512_CCAKEM_IP_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling Kyber512_CCAKEM_IP..."
+Kyber512_CCAKEM_IP_selftest.c: In function 'KYBER512_CCAKEM_IP_Reg_SelfTest':
+Kyber512_CCAKEM_IP_selftest.c:52:67: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( KYBER512_CCAKEM_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                                   ^~
+Kyber512_CCAKEM_IP_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+00:22:52 **** Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1932	    268	   3112	   5312	   14c0	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:07:48 **** Clean-only build of project Kyber512_CCAKEM_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/bram_v4_3/src -s clean 
+make -C microblaze_0/libsrc/cpu_v2_9/src -s clean 
+make -C microblaze_0/libsrc/Kyber512_CCAKEM_IP_v1_0/src -s clean 
+rm: cannot lstat `*.o': Invalid argument
+make[1]: *** [Makefile:26: clean] Error 1
+make -C microblaze_0/libsrc/standalone_v7_0/src -s clean 
+make: *** [Makefile:33: microblaze_0/libsrc/Kyber512_CCAKEM_IP_v1_0/src/make.clean] Error 2
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+make: Target 'clean' not remade because of errors.
+10:07:48 **** Clean-only build of configuration Debug for project Kyber512_CCAKEM ****
+make clean 
+rm -rf  ./src/main.d  ./src/main.o  Kyber512_CCAKEM.elf.size  Kyber512_CCAKEM.elf
+' '
+10:07:49 **** Build of project Kyber512_CCAKEM_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/Kyber512_CCAKEM_IP_v1_0/src"
+make -C microblaze_0/libsrc/Kyber512_CCAKEM_IP_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/Kyber512_CCAKEM_IP_v1_0/src"
+make -C microblaze_0/libsrc/Kyber512_CCAKEM_IP_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling Kyber512_CCAKEM_IP..."
+Kyber512_CCAKEM_IP_selftest.c: In function 'KYBER512_CCAKEM_IP_Reg_SelfTest':
+Kyber512_CCAKEM_IP_selftest.c:52:67: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( KYBER512_CCAKEM_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                                   ^~
+Kyber512_CCAKEM_IP_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+10:07:54 **** Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1932	    268	   3112	   5312	   14c0	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:08:20 **** Auto Build of project Kyber512_CCAKEM_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/Kyber512_CCAKEM_IP_v1_0/src"
+make -C microblaze_0/libsrc/Kyber512_CCAKEM_IP_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/Kyber512_CCAKEM_IP_v1_0/src"
+make -C microblaze_0/libsrc/Kyber512_CCAKEM_IP_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling Kyber512_CCAKEM_IP..."
+Kyber512_CCAKEM_IP_selftest.c: In function 'KYBER512_CCAKEM_IP_Reg_SelfTest':
+Kyber512_CCAKEM_IP_selftest.c:52:67: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( KYBER512_CCAKEM_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                                   ^~
+Kyber512_CCAKEM_IP_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+10:08:24 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:15:19 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:18:35 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/prng.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/prng.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/prng.d" -MT"src/prng.o" -o "src/prng.o" "../src/prng.cc"
+../src/prng.cc:6:45: error: 'XPAR_PRNG_0_S00_AXI_BASEADDR' was not declared in this scope
+ volatile u32 *PRNGControlRegister = (u32 *)(XPAR_PRNG_0_S00_AXI_BASEADDR)
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/prng.cc:6:45: note: suggested alternative: 'XPAR_PRNG_IP_0_S00_AXI_BASEADDR'
+ volatile u32 *PRNGControlRegister = (u32 *)(XPAR_PRNG_0_S00_AXI_BASEADDR)
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                             XPAR_PRNG_IP_0_S00_AXI_BASEADDR
+../src/prng.cc:3:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+make: *** [src/subdir.mk:35: src/prng.o] Error 1
+10:18:38 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/prng.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/prng.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/prng.d" -MT"src/prng.o" -o "src/prng.o" "../src/prng.cc"
+../src/prng.cc:6:45: error: 'XPAR_PRNG_0_S00_AXI_BASEADDR' was not declared in this scope
+ volatile u32 *PRNGControlRegister = (u32 *)(XPAR_PRNG_0_S00_AXI_BASEADDR)
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/prng.cc:6:45: note: suggested alternative: 'XPAR_PRNG_IP_0_S00_AXI_BASEADDR'
+ volatile u32 *PRNGControlRegister = (u32 *)(XPAR_PRNG_0_S00_AXI_BASEADDR)
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                             XPAR_PRNG_IP_0_S00_AXI_BASEADDR
+../src/prng.cc:3:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+make: *** [src/subdir.mk:35: src/prng.o] Error 1
+10:22:53 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/prng.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/prng.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/prng.d" -MT"src/prng.o" -o "src/prng.o" "../src/prng.cc"
+../src/prng.cc:6:76: error: expected ',' or ';' at end of input
+ volatile u32 *PRNGControlRegister = (u32 *)(XPAR_PRNG_IP_0_S00_AXI_BASEADDR)
+                                                                            ^
+../src/prng.cc:3:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+make: *** [src/subdir.mk:35: src/prng.o] Error 1
+10:23:22 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/prng.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/prng.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/prng.d" -MT"src/prng.o" -o "src/prng.o" "../src/prng.cc"
+../src/prng.cc:3:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/prng.cc'
+' '
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building file: ../src/simple_serial_kyber512.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial_kyber512.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial_kyber512.d" -MT"src/simple_serial_kyber512.o" -o "src/simple_serial_kyber512.o" "../src/simple_serial_kyber512.cc"
+'Finished building: ../src/simple_serial_kyber512.cc'
+' '
+'Building file: ../src/utilities.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/utilities.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/utilities.d" -MT"src/utilities.o" -o "src/utilities.o" "../src/utilities.cc"
+'Finished building: ../src/utilities.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50756	   1736	   3716	  56208	   db90	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:23:29 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/prng.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/prng.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/prng.d" -MT"src/prng.o" -o "src/prng.o" "../src/prng.cc"
+../src/prng.cc:3:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/prng.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50756	   1736	   3716	  56208	   db90	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:23:45 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50756	   1736	   3716	  56208	   db90	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:23:47 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50756	   1736	   3716	  56208	   db90	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:24:00 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50756	   1736	   3716	  56208	   db90	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:24:15 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+06:50:03 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+06:56:02 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_init()':
+../src/simple_serial.cc:29:25: error: expected primary-expression before ')' token
+   simpleserial_put('g', )
+                         ^
+../src/simple_serial.cc:27:5: warning: unused variable 'status' [-Wunused-variable]
+  u8 status[1];
+     ^~~~~~
+make: *** [src/subdir.mk:35: src/simple_serial.o] Error 1
+06:58:25 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_init()':
+../src/simple_serial.cc:29:25: error: expected primary-expression before ')' token
+   simpleserial_put('g', )
+                         ^
+../src/simple_serial.cc:27:6: warning: unused variable 'status' [-Wunused-variable]
+   u8 status[1];
+      ^~~~~~
+make: *** [src/subdir.mk:35: src/simple_serial.o] Error 1
+06:59:57 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50792	   1736	   3720	  56248	   dbb8	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+07:00:21 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+07:01:51 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+07:04:18 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50792	   1736	   3720	  56248	   dbb8	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+07:04:26 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+07:05:56 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50792	   1736	   3720	  56248	   dbb8	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+07:06:00 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+07:06:17 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+07:44:04 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial_kyber512.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial_kyber512.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial_kyber512.d" -MT"src/simple_serial_kyber512.o" -o "src/simple_serial_kyber512.o" "../src/simple_serial_kyber512.cc"
+'Finished building: ../src/simple_serial_kyber512.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50792	   1736	   3720	  56248	   dbb8	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+07:44:07 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+07:46:09 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50792	   1736	   3720	  56248	   dbb8	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+07:49:22 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:61:5: error: 'printf' was not declared in this scope
+     printf("Received: %c", RecvBuffer);
+     ^~~~~~
+../src/simple_serial.cc:61:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../src/simple_serial.cc:4:1:
++#include <cstdio>
+ 
+../src/simple_serial.cc:61:5:
+     printf("Received: %c", RecvBuffer);
+     ^~~~~~
+make: *** [src/subdir.mk:35: src/simple_serial.o] Error 1
+07:49:37 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50836	   1736	   3716	  56288	   dbe0	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+07:49:44 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+07:53:21 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13720	    692	   3588	  18000	   4650	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+07:53:23 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+07:54:06 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50864	   1736	   3720	  56320	   dc00	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+07:54:14 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+07:56:13 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50864	   1736	   3720	  56320	   dc00	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+07:56:15 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:02:29 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50864	   1736	   3720	  56320	   dc00	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+08:02:36 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:06:24 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:56:53: error: expected primary-expression before ')' token
+     status = XUartLite_Recv(&UartLite, &RecvBuffer, );
+                                                     ^
+make: *** [src/subdir.mk:35: src/simple_serial.o] Error 1
+08:08:17 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50864	   1736	   3720	  56320	   dc00	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+08:08:20 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:18:02 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50912	   1736	   3720	  56368	   dc30	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+08:18:05 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:18:47 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:24:26 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50688	   1736	   3720	  56144	   db50	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+08:24:55 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50640	   1736	   3720	  56096	   db20	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+08:25:14 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:27:26 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50652	   1736	   3716	  56104	   db28	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+08:28:52 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:91:1: error: a function-definition is not allowed here before '{' token
+ {
+ ^
+../src/simple_serial.cc:101:1: error: expected '}' at end of input
+ }
+ ^
+../src/simple_serial.cc:48:1: note: to match this '{'
+ {
+ ^
+make: *** [src/subdir.mk:35: src/simple_serial.o] Error 1
+08:28:56 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:67:5: warning: 'status' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     if (status == 0)
+     ^~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50732	   1736	   3716	  56184	   db78	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+08:29:17 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50736	   1736	   3720	  56192	   db80	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+08:29:29 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:36:01 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:38:41 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:43:18 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50656	   1736	   3720	  56112	   db30	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+08:43:23 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:44:57 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50656	   1736	   3720	  56112	   db30	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+08:45:08 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:47:52 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+../src/simple_serial.cc: At global scope:
+../src/simple_serial.cc:16:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13528	    692	   3516	  17736	   4548	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+08:48:05 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:48:16 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:48:59 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+../src/simple_serial.cc: At global scope:
+../src/simple_serial.cc:16:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13524	    692	   3520	  17736	   4548	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+08:49:04 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:49:36 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:50:36 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:50:41 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:52:01 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+../src/simple_serial.cc: At global scope:
+../src/simple_serial.cc:16:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13528	    692	   3516	  17736	   4548	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+08:52:07 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:52:11 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:53:25 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:54:44 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+../src/simple_serial.cc: At global scope:
+../src/simple_serial.cc:16:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13232	    692	   3516	  17440	   4420	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+08:54:47 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:54:56 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:55:45 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+08:57:57 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+09:08:05 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+09:32:29 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+09:33:22 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+09:34:06 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+09:37:19 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+09:37:28 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+09:37:46 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+09:38:18 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+09:40:59 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+09:41:10 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+09:43:35 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+09:43:42 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+09:50:35 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:02:46 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:06:58 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:08:22 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:08:33 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:09:20 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:10:56 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:13:24 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+../src/simple_serial.cc: At global scope:
+../src/simple_serial.cc:16:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13500	    692	   3520	  17712	   4530	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:13:27 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:14:07 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+../src/simple_serial.cc: At global scope:
+../src/simple_serial.cc:16:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13500	    692	   3520	  17712	   4530	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:14:14 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:16:27 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:49:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+   u8 status = 0;
+      ^~~~~~
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50608	   1736	   3720	  56064	   db00	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:16:33 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:17:01 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:49:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+   u8 status = 0;
+      ^~~~~~
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50608	   1736	   3720	  56064	   db00	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:17:13 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50628	   1736	   3716	  56080	   db10	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:17:19 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:17:49 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50628	   1736	   3716	  56080	   db10	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:17:51 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:18:19 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:49:6: warning: unused variable 'status' [-Wunused-variable]
+   u8 status = 0;
+      ^~~~~~
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+../src/simple_serial.cc: At global scope:
+../src/simple_serial.cc:16:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13484	    692	   3520	  17696	   4520	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:18:23 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:20:28 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:49:6: warning: unused variable 'status' [-Wunused-variable]
+   u8 status = 0;
+      ^~~~~~
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+../src/simple_serial.cc: At global scope:
+../src/simple_serial.cc:16:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13484	    692	   3520	  17696	   4520	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:20:30 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:21:23 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:49:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+   u8 status = 0;
+      ^~~~~~
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50608	   1736	   3720	  56064	   db00	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:21:26 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:21:46 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:49:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+   u8 status = 0;
+      ^~~~~~
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50608	   1736	   3720	  56064	   db00	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:21:57 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:22:48 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:49:6: warning: unused variable 'status' [-Wunused-variable]
+   u8 status = 0;
+      ^~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50688	   1736	   3720	  56144	   db50	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:22:50 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:23:51 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:49:6: warning: unused variable 'status' [-Wunused-variable]
+   u8 status = 0;
+      ^~~~~~
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+../src/simple_serial.cc: At global scope:
+../src/simple_serial.cc:16:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13484	    692	   3520	  17696	   4520	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:24:01 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:25:13 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:77:23: error: expected ';' before 'if'
+     xil_printf("here")
+                       ^
+                       ;
+../src/simple_serial.cc:80:5:
+     if (cmd == num_commands)
+     ~~                 
+../src/simple_serial.cc:49:6: warning: unused variable 'status' [-Wunused-variable]
+   u8 status = 0;
+      ^~~~~~
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+../src/simple_serial.cc: At global scope:
+../src/simple_serial.cc:16:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+make: *** [src/subdir.mk:35: src/simple_serial.o] Error 1
+10:25:15 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:49:6: warning: unused variable 'status' [-Wunused-variable]
+   u8 status = 0;
+      ^~~~~~
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+../src/simple_serial.cc: At global scope:
+../src/simple_serial.cc:16:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13512	    692	   3516	  17720	   4538	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:25:19 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:25:46 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:49:6: warning: unused variable 'status' [-Wunused-variable]
+   u8 status = 0;
+      ^~~~~~
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+../src/simple_serial.cc: At global scope:
+../src/simple_serial.cc:16:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13512	    692	   3516	  17720	   4538	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:25:48 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:26:17 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:49:6: warning: unused variable 'status' [-Wunused-variable]
+   u8 status = 0;
+      ^~~~~~
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+../src/simple_serial.cc: At global scope:
+../src/simple_serial.cc:16:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13512	    692	   3516	  17720	   4538	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:26:30 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:57:35 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:49:6: warning: unused variable 'status' [-Wunused-variable]
+   u8 status = 0;
+      ^~~~~~
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+../src/simple_serial.cc: At global scope:
+../src/simple_serial.cc:16:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13524	    692	   3520	  17736	   4548	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+10:57:40 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+10:59:34 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial_kyber512.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial_kyber512.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial_kyber512.d" -MT"src/simple_serial_kyber512.o" -o "src/simple_serial_kyber512.o" "../src/simple_serial_kyber512.cc"
+../src/simple_serial_kyber512.cc: In function 'u8 device_reset(u32)':
+../src/simple_serial_kyber512.cc:75:24: warning: statement has no effect [-Wunused-value]
+   return 1; XST_SUCCESS;
+                        ^
+'Finished building: ../src/simple_serial_kyber512.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13524	    692	   3520	  17736	   4548	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+11:00:26 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial_kyber512.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial_kyber512.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial_kyber512.d" -MT"src/simple_serial_kyber512.o" -o "src/simple_serial_kyber512.o" "../src/simple_serial_kyber512.cc"
+'Finished building: ../src/simple_serial_kyber512.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13524	    692	   3520	  17736	   4548	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+11:00:30 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+11:01:35 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial_kyber512.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial_kyber512.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial_kyber512.d" -MT"src/simple_serial_kyber512.o" -o "src/simple_serial_kyber512.o" "../src/simple_serial_kyber512.cc"
+'Finished building: ../src/simple_serial_kyber512.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13524	    692	   3520	  17736	   4548	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+11:04:44 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/simple_serial.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/simple_serial.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/simple_serial.d" -MT"src/simple_serial.o" -o "src/simple_serial.o" "../src/simple_serial.cc"
+../src/simple_serial.cc: In function 'void simpleserial_get()':
+../src/simple_serial.cc:49:6: warning: unused variable 'status' [-Wunused-variable]
+   u8 status = 0;
+      ^~~~~~
+../src/simple_serial.cc:51:9: warning: unused variable 'readBytes' [-Wunused-variable]
+   short readBytes = 1;
+         ^~~~~~~~~
+../src/simple_serial.cc:52:9: warning: unused variable 'recvCount' [-Wunused-variable]
+   short recvCount = 0;
+         ^~~~~~~~~
+../src/simple_serial.cc: At global scope:
+../src/simple_serial.cc:16:18: warning: 'UartLite' defined but not used [-Wunused-variable]
+ static XUartLite UartLite; /* Instance of the UartLite Device */
+                  ^~~~~~~~
+'Finished building: ../src/simple_serial.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13484	    692	   3520	  17696	   4520	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+11:04:58 **** Incremental Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+make: Nothing to be done for 'all'.
+12:12:46 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:25:51: error: 'get_public_key_secret_key' was not declared in this scope
+  simpleserial_addcmd('s', KYBER_SECRET_KEY_BYTES, get_public_key_secret_key);
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.cc:25:51: note: suggested alternative: 'set_public_key_secret_key'
+  simpleserial_addcmd('s', KYBER_SECRET_KEY_BYTES, get_public_key_secret_key);
+                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~
+                                                   set_public_key_secret_key
+make: *** [src/subdir.mk:35: src/main.o] Error 1
+12:15:28 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13456	    692	   3516	  17664	   4500	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '

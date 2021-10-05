@@ -1,0 +1,195 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Sep 28 11:13:38 2021
+| Host         : 444-xps-00 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'kyber_soc_Kyber512_CCAKEM_Mask_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of kyber_soc_Kyber512_CCAKEM_Mask_0_0 (uark.edu:user:Kyber512_CCAKEM_Masked_IP:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Sep 28 03:37:50 2021
+| Host         : 444-xps-00 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'kyber_soc_Kyber512_CCAKEM_Mask_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of kyber_soc_Kyber512_CCAKEM_Mask_0_0 (uark.edu:user:Kyber512_CCAKEM_Masked_IP:1.0) from (Rev. 1) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'kyber_soc_Kyber512_CCAKEM_Mask_0_0'.
+
+
+-Upgrade has added interface 'kyber_aclk' (xilinx.com:signal:clock:1.0)
+
+-Upgrade has added interface 'kyber_aresetn' (xilinx.com:signal:reset:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'kyber_soc_Kyber512_CCAKEM_Mask_0_0'. These changes may impact your design.
+
+
+-Upgraded port 's00_axi_araddr' width 5 differs from original width 4
+
+-Upgraded port 's00_axi_awaddr' width 5 differs from original width 4
+
+-Upgraded port 's01_axi_araddr' width 5 differs from original width 4
+
+-Upgraded port 's01_axi_awaddr' width 5 differs from original width 4
+
+-Upgrade has added port 'PRNG_enable'
+
+-Upgrade has added port 'PRNG_out'
+
+-Upgrade has added port 'debug_function_done'
+
+-Upgrade has added port 'kyber_aclk'
+
+-Upgrade has added port 'kyber_aresetn'
+
+-Upgrade has added port 'o_ciphertext'
+
+-Upgrade has added port 'o_shared_secret'
+
+-Upgrade has added port 'trigger1'
+
+-Upgrade has added port 'trigger2'
+
+
+4. Customization warnings
+-------------------------
+
+An attempt to modify the value of disabled parameter 'C_S01_AXI_ADDR_WIDTH' from '5' to '4' has been ignored for IP 'kyber_soc_Kyber512_CCAKEM_Mask_0_0'
+
+An attempt to modify the value of disabled parameter 'C_S00_AXI_ADDR_WIDTH' from '5' to '4' has been ignored for IP 'kyber_soc_Kyber512_CCAKEM_Mask_0_0'
+
+
+5. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv uark.edu:user:Kyber512_CCAKEM_Masked_IP:1.0 -user_name kyber_soc_Kyber512_CCAKEM_Mask_0_0
+set_property -dict "\
+  CONFIG.C_S00_AXI_ADDR_WIDTH {4} \
+  CONFIG.C_S00_AXI_BASEADDR {0xFFFFFFFF} \
+  CONFIG.C_S00_AXI_DATA_WIDTH {32} \
+  CONFIG.C_S00_AXI_HIGHADDR {0x00000000} \
+  CONFIG.C_S01_AXI_ADDR_WIDTH {4} \
+  CONFIG.C_S01_AXI_BASEADDR {0xFFFFFFFF} \
+  CONFIG.C_S01_AXI_DATA_WIDTH {32} \
+  CONFIG.C_S01_AXI_HIGHADDR {0x00000000} \
+  CONFIG.Component_Name {kyber_soc_Kyber512_CCAKEM_Mask_0_0} \
+  CONFIG.S00_AXI.ADDR_WIDTH {4} \
+  CONFIG.S00_AXI.ARUSER_WIDTH {0} \
+  CONFIG.S00_AXI.AWUSER_WIDTH {0} \
+  CONFIG.S00_AXI.BUSER_WIDTH {0} \
+  CONFIG.S00_AXI.CLK_DOMAIN {} \
+  CONFIG.S00_AXI.DATA_WIDTH {32} \
+  CONFIG.S00_AXI.FREQ_HZ {100000000} \
+  CONFIG.S00_AXI.HAS_BRESP {1} \
+  CONFIG.S00_AXI.HAS_BURST {0} \
+  CONFIG.S00_AXI.HAS_CACHE {0} \
+  CONFIG.S00_AXI.HAS_LOCK {0} \
+  CONFIG.S00_AXI.HAS_PROT {1} \
+  CONFIG.S00_AXI.HAS_QOS {0} \
+  CONFIG.S00_AXI.HAS_REGION {0} \
+  CONFIG.S00_AXI.HAS_RRESP {1} \
+  CONFIG.S00_AXI.HAS_WSTRB {1} \
+  CONFIG.S00_AXI.ID_WIDTH {0} \
+  CONFIG.S00_AXI.INSERT_VIP {0} \
+  CONFIG.S00_AXI.MAX_BURST_LENGTH {1} \
+  CONFIG.S00_AXI.NUM_READ_OUTSTANDING {1} \
+  CONFIG.S00_AXI.NUM_READ_THREADS {1} \
+  CONFIG.S00_AXI.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.S00_AXI.NUM_WRITE_THREADS {1} \
+  CONFIG.S00_AXI.PHASE {0.000} \
+  CONFIG.S00_AXI.PROTOCOL {AXI4LITE} \
+  CONFIG.S00_AXI.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.S00_AXI.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.S00_AXI.RUSER_WIDTH {0} \
+  CONFIG.S00_AXI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.S00_AXI.WIZ_DATA_WIDTH {32} \
+  CONFIG.S00_AXI.WIZ_NUM_REG {4} \
+  CONFIG.S00_AXI.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.S00_AXI.WUSER_WIDTH {0} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_BUSIF {S00_AXI} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_RESET {s00_axi_aresetn} \
+  CONFIG.S00_AXI_CLK.CLK_DOMAIN {} \
+  CONFIG.S00_AXI_CLK.FREQ_HZ {100000000} \
+  CONFIG.S00_AXI_CLK.INSERT_VIP {0} \
+  CONFIG.S00_AXI_CLK.PHASE {0.000} \
+  CONFIG.S00_AXI_RST.INSERT_VIP {0} \
+  CONFIG.S00_AXI_RST.POLARITY {ACTIVE_LOW} \
+  CONFIG.S01_AXI.ADDR_WIDTH {4} \
+  CONFIG.S01_AXI.ARUSER_WIDTH {0} \
+  CONFIG.S01_AXI.AWUSER_WIDTH {0} \
+  CONFIG.S01_AXI.BUSER_WIDTH {0} \
+  CONFIG.S01_AXI.CLK_DOMAIN {} \
+  CONFIG.S01_AXI.DATA_WIDTH {32} \
+  CONFIG.S01_AXI.FREQ_HZ {100000000} \
+  CONFIG.S01_AXI.HAS_BRESP {1} \
+  CONFIG.S01_AXI.HAS_BURST {0} \
+  CONFIG.S01_AXI.HAS_CACHE {0} \
+  CONFIG.S01_AXI.HAS_LOCK {0} \
+  CONFIG.S01_AXI.HAS_PROT {1} \
+  CONFIG.S01_AXI.HAS_QOS {0} \
+  CONFIG.S01_AXI.HAS_REGION {0} \
+  CONFIG.S01_AXI.HAS_RRESP {1} \
+  CONFIG.S01_AXI.HAS_WSTRB {1} \
+  CONFIG.S01_AXI.ID_WIDTH {0} \
+  CONFIG.S01_AXI.INSERT_VIP {0} \
+  CONFIG.S01_AXI.MAX_BURST_LENGTH {1} \
+  CONFIG.S01_AXI.NUM_READ_OUTSTANDING {1} \
+  CONFIG.S01_AXI.NUM_READ_THREADS {1} \
+  CONFIG.S01_AXI.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.S01_AXI.NUM_WRITE_THREADS {1} \
+  CONFIG.S01_AXI.PHASE {0.000} \
+  CONFIG.S01_AXI.PROTOCOL {AXI4LITE} \
+  CONFIG.S01_AXI.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.S01_AXI.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.S01_AXI.RUSER_WIDTH {0} \
+  CONFIG.S01_AXI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.S01_AXI.WIZ_DATA_WIDTH {32} \
+  CONFIG.S01_AXI.WIZ_NUM_REG {4} \
+  CONFIG.S01_AXI.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.S01_AXI.WUSER_WIDTH {0} \
+  CONFIG.S01_AXI_CLK.ASSOCIATED_BUSIF {S01_AXI} \
+  CONFIG.S01_AXI_CLK.ASSOCIATED_RESET {s01_axi_aresetn} \
+  CONFIG.S01_AXI_CLK.CLK_DOMAIN {} \
+  CONFIG.S01_AXI_CLK.FREQ_HZ {100000000} \
+  CONFIG.S01_AXI_CLK.INSERT_VIP {0} \
+  CONFIG.S01_AXI_CLK.PHASE {0.000} \
+  CONFIG.S01_AXI_RST.INSERT_VIP {0} \
+  CONFIG.S01_AXI_RST.POLARITY {ACTIVE_LOW} " [get_ips kyber_soc_Kyber512_CCAKEM_Mask_0_0]
+
+

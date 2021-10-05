@@ -1,0 +1,21 @@
+12:15:28 **** Auto Build of configuration Debug for project Kyber512_CCAKEM ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Kyber512_CCAKEM_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: Kyber512_CCAKEM.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../Kyber512_CCAKEM_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Kyber512_CCAKEM.elf"  ./src/main.o ./src/prng.o ./src/simple_serial.o ./src/simple_serial_kyber512.o ./src/utilities.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: Kyber512_CCAKEM.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Kyber512_CCAKEM.elf  |tee "Kyber512_CCAKEM.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13456	    692	   3516	  17664	   4500	Kyber512_CCAKEM.elf
+'Finished building: Kyber512_CCAKEM.elf.size'
+' '
+
+12:15:29 Build Finished (took 718ms)
+

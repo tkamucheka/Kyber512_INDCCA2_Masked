@@ -1,0 +1,44 @@
+#ifndef SIMPLESERIAL_KYBER512_H
+#define SIMPLESERIAL_KYBER512_H
+
+#include "xparameters.h"
+#include "xil_types.h"
+#include "xstatus.h"
+#include "xil_io.h"
+#include "xil_cache.h"
+
+#include "Kyber512_CCAKEM_IP.h"
+#include "simple_serial.h"
+#include "utilities.h"
+
+// Kyber512 base addresses
+#define S00_BASEADDR XPAR_KYBER512_CCAKEM_IP_0_S00_AXI_BASEADDR
+#define S01_BASEADDR XPAR_KYBER512_CCAKEM_IP_0_S01_AXI_BASEADDR
+
+// Parameter sizes
+#define KYBER_RAND_BYTES 32
+#define KYBER_PUBLIC_KEY_BYTES 800
+#define KYBER_CIPHERTEXT_BYTES 736
+#define KYBER_SHAREDSECRET_BYTES 32
+#define KYBER_SECRET_KEY_BYTES 1356
+
+// Masks
+#define KYBER_RESET_MASK (1 << 31)
+#define KYBER_MODE_MASK (1 << 0)
+#define KYBER_ENABLE_MASK (1 << 1)
+#define KYBER_I_MEM_A_WRITE_EN_MASK (1 << 2)
+#define KYBER_I_MEM_B_WRITE_EN_MASK (1 << 3)
+
+// Commands
+u8 device_reset(u32 _);
+u8 device_enable(u32 _);
+u8 set_mode(u32 len);
+u8 set_rand_bytes_ciphertext(u32 len);
+u8 set_public_key_secret_key(u32 len);
+u8 get_ciphertext(u32 len);
+u8 get_shared_secret(u32 len);
+
+// Platform
+u8 platform_init();
+
+#endif // !__SIMPLESERIAL_KYBER512_H
