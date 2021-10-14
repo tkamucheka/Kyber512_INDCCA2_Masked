@@ -1,8 +1,8 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Tue Sep 28 11:13:44 2021
-//Host        : 444-xps-00 running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+//Date        : Wed Oct 13 20:09:37 2021
+//Host        : primus running 64-bit Ubuntu 21.04
 //Command     : generate_target kyber_soc.bd
 //Design      : kyber_soc
 //Purpose     : IP block netlist

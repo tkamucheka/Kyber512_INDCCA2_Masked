@@ -260,6 +260,10 @@ proc create_root_design { parentCell } {
 
   # Create instance: Kyber512_CCAKEM_Mask_0, and set properties
   set Kyber512_CCAKEM_Mask_0 [ create_bd_cell -type ip -vlnv uark.edu:user:Kyber512_CCAKEM_Masked_IP:1.0 Kyber512_CCAKEM_Mask_0 ]
+  set_property -dict [ list \
+   CONFIG.C_S00_AXI_ADDR_WIDTH {5} \
+   CONFIG.C_S01_AXI_ADDR_WIDTH {5} \
+ ] $Kyber512_CCAKEM_Mask_0
 
   # Create instance: PRNG_IP_0, and set properties
   set PRNG_IP_0 [ create_bd_cell -type ip -vlnv uark.edu:user:PRNG_IP:1.0 PRNG_IP_0 ]

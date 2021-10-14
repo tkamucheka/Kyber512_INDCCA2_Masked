@@ -1,5 +1,68 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Wed Oct 13 20:09:24 2021
+| Host         : primus running 64-bit Ubuntu 21.04
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'kyber_soc_Kyber512_CCAKEM_Mask_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of kyber_soc_Kyber512_CCAKEM_Mask_0_0 (uark.edu:user:Kyber512_CCAKEM_Masked_IP:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Tue Oct  5 11:50:17 2021
+| Host         : primus running 64-bit Ubuntu 21.04
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'kyber_soc_Kyber512_CCAKEM_Mask_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of kyber_soc_Kyber512_CCAKEM_Mask_0_0 (uark.edu:user:Kyber512_CCAKEM_Masked_IP:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Tue Oct  5 11:32:07 2021
+| Host         : primus running 64-bit Ubuntu 21.04
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'kyber_soc_Kyber512_CCAKEM_Mask_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of kyber_soc_Kyber512_CCAKEM_Mask_0_0 (uark.edu:user:Kyber512_CCAKEM_Masked_IP:1.0) from (Rev. 3) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 | Date         : Tue Sep 28 11:13:38 2021
 | Host         : 444-xps-00 running 64-bit major release  (build 9200)

@@ -7,7 +7,6 @@ vhdl xil_defaultlib  \
 "../../../bd/kyber_soc/ip/kyber_soc_ilmb_bram_if_cntlr_0_1/sim/kyber_soc_ilmb_bram_if_cntlr_0.vhd" \
 "../../../bd/kyber_soc/ip/kyber_soc_mdm_1_0_1/sim/kyber_soc_mdm_1_0.vhd" \
 "../../../bd/kyber_soc/ip/kyber_soc_rst_clk_wiz_1_100M_0_1/sim/kyber_soc_rst_clk_wiz_1_100M_0.vhd" \
-"../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/MOD_Q_Div/sim/MOD_Q_Div.vhd" \
 "../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/State_Pack_Cit_Div/sim/State_Pack_Cit_Div.vhd" \
 
 nosort

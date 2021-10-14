@@ -66,11 +66,11 @@ vmap div_gen_v5_1_15 questa_lib/msim/div_gen_v5_1_15
 vmap axi_protocol_converter_v2_1_19 questa_lib/msim/axi_protocol_converter_v2_1_19
 
 vlog -work xil_defaultlib -64 -sv "+incdir+../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ipshared/ec67/hdl" "+incdir+../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ipshared/c923" \
-"C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-"C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+"/mnt/Storm/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+"/mnt/Storm/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -64 -93 \
-"C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
+"/mnt/Storm/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vcom -work microblaze_v11_0_1 -64 -93 \
 "../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ipshared/f8c3/hdl/microblaze_v11_0_vh_rfs.vhd" \
@@ -166,55 +166,50 @@ vlog -work xil_defaultlib -64 "+incdir+../../../../Kyber512_CCAKEM_Masked.srcs/s
 "../../../bd/kyber_soc/ip/kyber_soc_PRNG_IP_0_1/sim/kyber_soc_PRNG_IP_0_1.v" \
 "../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/NTT_Poly_BRAM/sim/NTT_Poly_BRAM.v" \
 "../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/Zeta/sim/Zeta.v" \
-
-vcom -work xbip_utils_v3_0_10 -64 -93 \
-"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/MOD_Q_Div/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
-
-vcom -work axi_utils_v2_0_6 -64 -93 \
-"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/MOD_Q_Div/hdl/axi_utils_v2_0_vh_rfs.vhd" \
-
-vcom -work xbip_pipe_v3_0_6 -64 -93 \
-"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/MOD_Q_Div/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
-
-vcom -work xbip_dsp48_wrapper_v3_0_4 -64 -93 \
-"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/MOD_Q_Div/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
-
-vcom -work xbip_dsp48_addsub_v3_0_6 -64 -93 \
-"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/MOD_Q_Div/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd" \
-
-vcom -work xbip_bram18k_v3_0_6 -64 -93 \
-"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/MOD_Q_Div/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
-
-vcom -work mult_gen_v12_0_15 -64 -93 \
-"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/MOD_Q_Div/hdl/mult_gen_v12_0_vh_rfs.vhd" \
-
-vcom -work floating_point_v7_0_16 -64 -93 \
-"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/MOD_Q_Div/hdl/floating_point_v7_0_vh_rfs.vhd" \
-
-vcom -work xbip_dsp48_mult_v3_0_6 -64 -93 \
-"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/MOD_Q_Div/hdl/xbip_dsp48_mult_v3_0_vh_rfs.vhd" \
-
-vcom -work xbip_dsp48_multadd_v3_0_6 -64 -93 \
-"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/MOD_Q_Div/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd" \
-
-vcom -work div_gen_v5_1_15 -64 -93 \
-"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/MOD_Q_Div/hdl/div_gen_v5_1_vh_rfs.vhd" \
-
-vcom -work xil_defaultlib -64 -93 \
-"../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/MOD_Q_Div/sim/MOD_Q_Div.vhd" \
-
-vlog -work xil_defaultlib -64 "+incdir+../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ipshared/ec67/hdl" "+incdir+../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ipshared/c923" \
 "../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/L96_NTT_Poly_0/sim/L96_NTT_Poly_0.v" \
 "../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/L128_AtG/sim/L128_AtG.v" \
 "../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/L128_EncPk_DecSk_PolyVec/sim/L128_EncPk_DecSk_PolyVec.v" \
+"../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/L96_Reduce_DecMp/sim/L96_Reduce_DecMp.v" \
+"../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/L128_INTT_Enc_BpV_DecMp/sim/L128_INTT_Enc_BpV_DecMp.v" \
+"../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/L12_k/sim/L12_k.v" \
+
+vcom -work xbip_utils_v3_0_10 -64 -93 \
+"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/State_Pack_Cit_Div/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
+
+vcom -work axi_utils_v2_0_6 -64 -93 \
+"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/State_Pack_Cit_Div/hdl/axi_utils_v2_0_vh_rfs.vhd" \
+
+vcom -work xbip_pipe_v3_0_6 -64 -93 \
+"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/State_Pack_Cit_Div/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
+
+vcom -work xbip_dsp48_wrapper_v3_0_4 -64 -93 \
+"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/State_Pack_Cit_Div/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
+
+vcom -work xbip_dsp48_addsub_v3_0_6 -64 -93 \
+"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/State_Pack_Cit_Div/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd" \
+
+vcom -work xbip_bram18k_v3_0_6 -64 -93 \
+"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/State_Pack_Cit_Div/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
+
+vcom -work mult_gen_v12_0_15 -64 -93 \
+"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/State_Pack_Cit_Div/hdl/mult_gen_v12_0_vh_rfs.vhd" \
+
+vcom -work floating_point_v7_0_16 -64 -93 \
+"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/State_Pack_Cit_Div/hdl/floating_point_v7_0_vh_rfs.vhd" \
+
+vcom -work xbip_dsp48_mult_v3_0_6 -64 -93 \
+"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/State_Pack_Cit_Div/hdl/xbip_dsp48_mult_v3_0_vh_rfs.vhd" \
+
+vcom -work xbip_dsp48_multadd_v3_0_6 -64 -93 \
+"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/State_Pack_Cit_Div/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd" \
+
+vcom -work div_gen_v5_1_15 -64 -93 \
+"../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/State_Pack_Cit_Div/hdl/div_gen_v5_1_vh_rfs.vhd" \
 
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/State_Pack_Cit_Div/sim/State_Pack_Cit_Div.vhd" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ipshared/ec67/hdl" "+incdir+../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ipshared/c923" \
-"../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/L96_Reduce_DecMp/sim/L96_Reduce_DecMp.v" \
-"../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/L128_INTT_Enc_BpV_DecMp/sim/L128_INTT_Enc_BpV_DecMp.v" \
-"../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/L12_k/sim/L12_k.v" \
 "../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/L96_Reduce_EncV/sim/L96_Reduce_EncV.v" \
 "../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/L96_Reduce_EncBp/sim/L96_Reduce_EncBp.v" \
 "../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/L32_noise_eG/sim/L32_noise_eG.v" \
@@ -223,75 +218,83 @@ vlog -work xil_defaultlib -64 "+incdir+../../../../Kyber512_CCAKEM_Masked.srcs/s
 "../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/CT_OUT_MEM/sim/CT_OUT_MEM.v" \
 "../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/PK_SK_MEM/sim/PK_SK_MEM.v" \
 "../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/src/Rand_CT_MEM/sim/Rand_CT_MEM.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/BRAM_MUX.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/Kyber512_CCAKEM_Masked.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/hdl/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/hdl/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/Kyber512_INDCPA.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/Kyber512_indcpa_DEC.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/Kyber512_indcpa_ENC.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/Kyber512_indcpa_shared.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/Kyber512_pre_post_INDCPA.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/Montgomery_Reduce.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/NTT.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/Poly_Decompress.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/Poly_Decompress__r.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/Poly_Decompress__t.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/Polyvec_Decompress.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/Polyvec_Decompress__r.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/Polyvec_Decompress__t.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Add.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Add__Add_3.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Add__Poly_Add__Add.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Decompressed_Ciphertext.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Hash.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Hash__CBD.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Hash__Permutation.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Hash__Rej_Uniform.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Hash__Rej_Uniform_Comparer.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_InvNTT__INTT.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Invntt.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Invntt__BarrettR_MontgomeryR.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Invntt__MontegomeryR.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_NTT_PolyReduce.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_NTT_PolyReduce_BarrettR.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_PAcc.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_PAcc__State_PolyVec_PAcc.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_PAcc__State_PolyVec_PAcc__Poly_Add.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_PAcc__State_PolyVec_PAcc__Poly_Add__Data_Cal.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_PAcc__State_PolyVec_PAcc__Poly_Basemul.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_PAcc__State_PolyVec_PAcc__Poly_Basemul__Basemul.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_PAcc__State_PolyVec_PAcc__Poly_Basemul__Basemul__MontgomeryR.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_PAcc__State_PolyVec_PAcc__Poly_Reduce.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_PAcc__State_PolyVec_PAcc__Poly_Reduce__BarrettR.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Pack_Cit.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Pack_Cit__Pack_PolyVec_Group.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Pack_Cit__Pack_PolyVec__Mask_Add.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Pack_Cit__Pack_PolyVec__Shift.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Pack_Cit__Pack_Poly_Group.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Pack_Cit__Pack_Poly__Mask_Add.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Pack_Cit__Pack_Poly__Shift.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Poly_Sub.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Poly_Sub___Data_Cal.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Poly_Sub___Negate.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Poly_frommsg.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Polytomsg.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Polytomsg__DataCal.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Polytomsg__DataCal__Add.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Polytomsg__DataCal__Csubq.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Reduce.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Reduce__PolyReduce.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Reduce____BarrettR.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Unpack.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Unpack__mask.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Unpack__poly_frombytes.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_Unpack__poly_frombytes__r.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_ntt.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/State_ntt_BRAM_MUX.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/f_permutation.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/rconst2in1.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/src/round2in1.v" \
-"../../../bd/kyber_soc/ipshared/4ea4/hdl/Kyber512_CCAKEM_Masked_IP_v1_0.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/A2B.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/BRAM_MUX.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/Barrett_Reduce.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/Kyber512_CCAKEM_Masked.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/hdl/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/hdl/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/Kyber512_INDCPA.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/Kyber512_indcpa_DEC.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/Kyber512_indcpa_ENC.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/Kyber512_indcpa_shared.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/Kyber512_pre_post_INDCPA.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/Montgomery_Reduce.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/NTT.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/PRNG.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/Poly_Decompress.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/Poly_Decompress__r.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/Poly_Decompress__t.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/Polyvec_Decompress.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/Polyvec_Decompress__r.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/Polyvec_Decompress__t.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/RNG_core.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Add.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Add__Add_3.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Add__Poly_Add__Add.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Decompressed_Ciphertext.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Hash.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Hash__CBD.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Hash__Permutation.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Hash__Rej_Uniform.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Hash__Rej_Uniform_Comparer.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_InvNTT__INTT.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Invntt.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Invntt__BarrettR_MontgomeryR.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Invntt__MontegomeryR.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_NTT_PolyReduce.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_NTT_PolyReduce_BarrettR.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_PAcc.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_PAcc__State_PolyVec_PAcc.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_PAcc__State_PolyVec_PAcc__Poly_Add.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_PAcc__State_PolyVec_PAcc__Poly_Add__Data_Cal.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_PAcc__State_PolyVec_PAcc__Poly_Basemul.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_PAcc__State_PolyVec_PAcc__Poly_Basemul__Basemul.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_PAcc__State_PolyVec_PAcc__Poly_Basemul__Basemul__MontgomeryR.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_PAcc__State_PolyVec_PAcc__Poly_Reduce.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_PAcc__State_PolyVec_PAcc__Poly_Reduce__BarrettR.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Pack_Cit.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Pack_Cit__Pack_PolyVec_Group.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Pack_Cit__Pack_PolyVec__Mask_Add.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Pack_Cit__Pack_PolyVec__Shift.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Pack_Cit__Pack_Poly_Group.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Pack_Cit__Pack_Poly__Mask_Add.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Pack_Cit__Pack_Poly__Shift.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Poly_Sub.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Poly_Sub___Data_Cal.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Poly_Sub___Negate.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Poly_frommsg.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Polytomsg.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Polytomsg__DataCal__Csubq.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Polytomsg__masked_decode.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Polytomsg__masked_decode_TransformPow2.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Polytomsg__masked_decode_s0.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Polytomsg__masked_decode_s2.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Reduce.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Reduce__PolyReduce.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Reduce____BarrettR.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Unpack.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Unpack__mask.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Unpack__poly_frombytes.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Unpack__poly_frombytes__r.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_Unpack__rand_csuq.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_ntt.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/State_ntt_BRAM_MUX.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/f_permutation.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/rconst2in1.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/round2in1.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/src/shift_reg.v" \
+"../../../bd/kyber_soc/ipshared/b9e4/hdl/Kyber512_CCAKEM_Masked_IP_v1_0.v" \
 "../../../bd/kyber_soc/ip/kyber_soc_Kyber512_CCAKEM_Mask_0_0/sim/kyber_soc_Kyber512_CCAKEM_Mask_0_0.v" \
 
 vlog -work axi_protocol_converter_v2_1_19 -64 "+incdir+../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ipshared/ec67/hdl" "+incdir+../../../../Kyber512_CCAKEM_Masked.srcs/sources_1/bd/kyber_soc/ipshared/c923" \

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: uark.edu:user:Kyber512_CCAKEM_Masked_IP:1.0
-// IP Revision: 3
+// IP Revision: 8
 
 (* X_CORE_INFO = "Kyber512_CCAKEM_Masked_IP_v1_0,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "kyber_soc_Kyber512_CCAKEM_Mask_0_0,Kyber512_CCAKEM_Masked_IP_v1_0,{}" *)
@@ -107,7 +107,7 @@ module kyber_soc_Kyber512_CCAKEM_Mask_0_0 (
   s00_axi_aresetn
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kyber_aclk, ASSOCIATED_RESET kyber_aresetn, ASSOCIATED_BUSIF kyber512, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN kyber_soc_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kyber_aclk, ASSOCIATED_RESET kyber_aresetn, ASSOCIATED_BUSIF kyber_aclk, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN kyber_soc_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 kyber_aclk CLK" *)
 input wire kyber_aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kyber_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
