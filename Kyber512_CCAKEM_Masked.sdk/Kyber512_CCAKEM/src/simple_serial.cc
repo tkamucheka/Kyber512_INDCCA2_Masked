@@ -13,7 +13,7 @@ typedef struct ss_cmd
 static ss_cmd commands[MAX_SS_CMDS];
 static int num_commands = 0;
 
-static XUartLite UartLite; /* Instance of the UartLite Device */
+//static XUartLite UartLite; /* Instance of the UartLite Device */
 
 // Callback function for "v" command.
 // This can exist in v1.0 as long as we don't actually send back an ack ("z")
@@ -66,7 +66,8 @@ void simpleserial_get(void)
 	//    if (status == 0)
 	//      return;
 
-    xil_printf("Received: %c", RecvBuffer);
+    // DEBUG:
+    // xil_printf("Received: %c", RecvBuffer);
 
     // Find which command we're receiving
     int cmd;
@@ -82,7 +83,7 @@ void simpleserial_get(void)
     u8 ret[1];
     ret[0] = commands[cmd].fp(commands[cmd].len);
 
-    // ACK
+    // Send ACK
     simpleserial_put('z', 1, ret);
   }
 }

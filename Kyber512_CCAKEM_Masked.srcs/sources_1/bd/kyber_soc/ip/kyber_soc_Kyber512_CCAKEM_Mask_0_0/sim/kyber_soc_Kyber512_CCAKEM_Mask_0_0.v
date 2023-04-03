@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2021 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2023 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -48,7 +48,7 @@
 
 
 // IP VLNV: uark.edu:user:Kyber512_CCAKEM_Masked_IP:1.0
-// IP Revision: 8
+// IP Revision: 16
 
 `timescale 1ns/1ps
 
@@ -56,13 +56,9 @@
 module kyber_soc_Kyber512_CCAKEM_Mask_0_0 (
   kyber_aclk,
   kyber_aresetn,
-  PRNG_out,
-  PRNG_enable,
+  PRNG_data,
   trigger1,
   trigger2,
-  debug_function_done,
-  o_ciphertext,
-  o_shared_secret,
   s01_axi_awaddr,
   s01_axi_awprot,
   s01_axi_awvalid,
@@ -113,13 +109,9 @@ input wire kyber_aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kyber_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 kyber_aresetn RST" *)
 input wire kyber_aresetn;
-input wire [15 : 0] PRNG_out;
-output wire PRNG_enable;
+input wire [15 : 0] PRNG_data;
 output wire trigger1;
 output wire trigger2;
-output wire debug_function_done;
-output wire [5887 : 0] o_ciphertext;
-output wire [255 : 0] o_shared_secret;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S01_AXI AWADDR" *)
 input wire [4 : 0] s01_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S01_AXI AWPROT" *)
@@ -235,13 +227,9 @@ input wire s00_axi_aresetn;
   ) inst (
     .kyber_aclk(kyber_aclk),
     .kyber_aresetn(kyber_aresetn),
-    .PRNG_out(PRNG_out),
-    .PRNG_enable(PRNG_enable),
+    .PRNG_data(PRNG_data),
     .trigger1(trigger1),
     .trigger2(trigger2),
-    .debug_function_done(debug_function_done),
-    .o_ciphertext(o_ciphertext),
-    .o_shared_secret(o_shared_secret),
     .s01_axi_awaddr(s01_axi_awaddr),
     .s01_axi_awprot(s01_axi_awprot),
     .s01_axi_awvalid(s01_axi_awvalid),

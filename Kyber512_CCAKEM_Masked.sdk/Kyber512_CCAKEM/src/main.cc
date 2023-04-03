@@ -10,10 +10,6 @@
 int main(void)
 {
 	platform_init();
-	
-	xil_printf("======================================\n\r");
-	xil_printf("Kyber512 CCAKEM\n\r");
-	xil_printf("======================================\n\r");
 
 	simpleserial_init();
 	simpleserial_addcmd('x', 0, device_reset);
@@ -22,13 +18,13 @@ int main(void)
 	simpleserial_addcmd('r', KYBER_RAND_BYTES, set_rand_bytes_ciphertext);
 	simpleserial_addcmd('k', KYBER_PUBLIC_KEY_BYTES, set_public_key_secret_key);
 	simpleserial_addcmd('c', KYBER_CIPHERTEXT_BYTES, set_rand_bytes_ciphertext);
-//	simpleserial_addcmd('s', KYBER_SECRET_KEY_BYTES, get_public_key_secret_key);
+	simpleserial_addcmd('s', KYBER_SECRET_KEY_BYTES, set_public_key_secret_key);
 	simpleserial_addcmd('t', KYBER_CIPHERTEXT_BYTES, get_ciphertext);
 	simpleserial_addcmd('a', KYBER_SHAREDSECRET_BYTES, get_shared_secret);
 
 	while (1)
 	{
-		simpleserial_get();
+	  simpleserial_get();
 	}
 
 	return XST_SUCCESS;

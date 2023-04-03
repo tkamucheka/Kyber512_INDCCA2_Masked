@@ -1,6 +1,8 @@
+#include "xil_cache.h"
+#include "Kyber512_CCAKEM_MASKED_IP.h"
 #include "utilities.h"
 
-static XUartLite UartLite; /* Instance of the UartLite Device */
+XUartLite UartLite; /* Instance of the UartLite Device */
 
 u8 hex_decode(u8 byte)
 {
@@ -18,16 +20,25 @@ u8 hex_decode(u8 byte)
 // Write packets from UART to KYBER512 IP Core BRAMs
 u8 uart_to_bram(volatile u32 *input_reg, volatile u32 *memaddr_reg, int len)
 {
+  /*
+	   * Disable Data Cache
+	   */
+  Xil_DCacheDisable();
+
+  //  XUartLite UartLite; /* Instance of the UartLite Device */
+  int byteCount = 0;
   int receivedCount = 0;
   u32 buffer = 0;
   u32 memaddr = 0;
   u8 RecvBuffer = 0x00;
 
+  *memaddr_reg = 0;
+
   // Wait for UART to finish sending before proceeding
-  while (XUartLite_IsSending(&UartLite) == 1)
-  {
-  }
-  XUartLite_ResetFifos(&UartLite);
+  //  while (XUartLite_IsSending(&UartLite) == 1)
+  //  {
+  //  }
+  //  XUartLite_ResetFifos(&UartLite);
 
   // Anticipate control program will send data
   // Stop receiving when appropriate number of bytes is received
@@ -37,9 +48,12 @@ u8 uart_to_bram(volatile u32 *input_reg, volatile u32 *memaddr_reg, int len)
     if (!XUartLite_IsReceiveEmpty(UART_BASEADDR))
     {
       // Receive byte from UART
-      receivedCount += XUartLite_Recv(&UartLite,
-                                      &RecvBuffer,
-                                      len - receivedCount);
+      //      receivedCount += XUartLite_Recv(&UartLite,
+      //                                      &RecvBuffer,
+      //                                      len - receivedCount);
+      RecvBuffer = XUartLite_RecvByte(XPAR_AXI_UARTLITE_0_BASEADDR);
+      receivedCount += 1;
+      //      xil_printf("RecvBuffer: %08x\r\n", hex_decode(RecvBuffer));
 
       // Pack received data into 32-bit buffer
       buffer = (buffer << 4) | hex_decode(RecvBuffer); // "a" => A
@@ -48,38 +62,72 @@ u8 uart_to_bram(volatile u32 *input_reg, volatile u32 *memaddr_reg, int len)
       if (RecvBuffer == '\n')
         return XST_FAILURE;
 
+      // *memaddr_reg = memaddr;
+
       // Write to register after every 4 bytes
       if (receivedCount % 8 == 0)
       {
+        // Reset recvCount
+        //        receivedCount = 0;
+
+        // Increment byte count
+        byteCount += 4;
+
         // Write packet to bram
-        *input_reg = buffer;
-        *memaddr_reg = memaddr++;
+        KYBER512_CCAKEM_MASKED_IP_mWriteReg(XPAR_KYBER512_CCAKEM_MASK_0_S01_AXI_BASEADDR, KYBER512_CCAKEM_MASKED_IP_S00_AXI_SLV_REG1_OFFSET, memaddr);
+        //for (int i = 0; i < 100; ++i)
+        //{
+        //}
+        KYBER512_CCAKEM_MASKED_IP_mWriteReg(XPAR_KYBER512_CCAKEM_MASK_0_S01_AXI_BASEADDR, KYBER512_CCAKEM_MASKED_IP_S00_AXI_SLV_REG0_OFFSET, buffer);
+
+        memaddr += 1;
+
+        // *input_reg = buffer;
+        // memaddr += 1;
 
         // DEBUG:
-        // Ebyteo received packet
-        xil_printf("%08x", *input_reg);
+        // byte received packet
+        // xil_printf("%08x: %08x", *memaddr_reg, *input_reg);
+        // xil_printf("\tRecvCount: %d", receivedCount);
+        // xil_printf("\tByteCount: %d", byteCount);
+        // xil_printf("\tExpected: %d", len);
+
+        // ACK
+        xil_printf("z00\n");
       }
 
-      if (receivedCount == len)
+      if (byteCount == len)
+      {
+        // DEBUG:
+        // xil_printf("\r\nRecvCount: %d\r\n", byteCount);
         break;
+      }
     }
   }
 
-  // Assert termination bytearacter sequence and quit
-  if (XUartLite_Recv(&UartLite, &RecvBuffer, 1) && RecvBuffer == '\n')
+  // DEBUG:
+  // xil_printf("HERE!");
+  // xil_printf("\tRecvCount: %d", byteCount);
+  // xil_printf("\tExpected: %d", len);
+
+  // Assert termination byte character sequence and quit
+  RecvBuffer = XUartLite_RecvByte(XPAR_AXI_UARTLITE_0_BASEADDR);
+  if (RecvBuffer == '\n')
     return XST_SUCCESS;
   else
     return XST_FAILURE;
 }
 
 // Read packets from KYBER512 IP Core to UART
-u8 bram_to_uart(volatile u32 *output_reg, volatile u32 *memaddr_reg, int len)
+u8 bram_to_uart(volatile u32 *output_reg, volatile u32 *memaddr_reg, int len, int offset)
 {
+  //  XUartLite UartLite; /* Instance of the UartLite Device */
+
   // Wait for UART to finish sending before proceeding
-  while (XUartLite_IsSending(&UartLite) == 1)
-  {
-  }
-  XUartLite_ResetFifos(&UartLite);
+  // while (XUartLite_IsSending(&UartLite) == 1)
+  // {
+  // }
+  // XUartLite_ResetFifos(&UartLite);
 
   // Read mem and transmit on UART
   for (int i = 0; i < (len >> 2);)
@@ -88,12 +136,12 @@ u8 bram_to_uart(volatile u32 *output_reg, volatile u32 *memaddr_reg, int len)
     if (!XUartLite_IsTransmitFull(UART_BASEADDR))
     {
       // Write packet data over UART
-      *memaddr_reg = i++;
+      *memaddr_reg = offset + i++;
       xil_printf("%08x", *output_reg);
     }
   }
 
-  // Send termination bytearacter sequence and quit
-  xil_printf("\n");
+  // Send termination byte character sequence and quit
+  // xil_printf("\n");
   return XST_SUCCESS;
 }

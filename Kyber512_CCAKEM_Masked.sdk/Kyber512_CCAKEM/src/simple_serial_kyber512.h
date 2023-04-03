@@ -7,20 +7,20 @@
 #include "xil_io.h"
 #include "xil_cache.h"
 
-#include "Kyber512_CCAKEM_IP.h"
+#include "Kyber512_CCAKEM_Masked_IP.h"
 #include "simple_serial.h"
 #include "utilities.h"
 
 // Kyber512 base addresses
-#define S00_BASEADDR XPAR_KYBER512_CCAKEM_IP_0_S00_AXI_BASEADDR
-#define S01_BASEADDR XPAR_KYBER512_CCAKEM_IP_0_S01_AXI_BASEADDR
+#define S00_BASEADDR XPAR_KYBER512_CCAKEM_MASK_0_S00_AXI_BASEADDR
+#define S01_BASEADDR XPAR_KYBER512_CCAKEM_MASK_0_S01_AXI_BASEADDR
 
 // Parameter sizes
 #define KYBER_RAND_BYTES 32
 #define KYBER_PUBLIC_KEY_BYTES 800
 #define KYBER_CIPHERTEXT_BYTES 736
 #define KYBER_SHAREDSECRET_BYTES 32
-#define KYBER_SECRET_KEY_BYTES 1356
+#define KYBER_SECRET_KEY_BYTES 1632
 
 // Masks
 #define KYBER_RESET_MASK (1 << 31)
