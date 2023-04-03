@@ -1,0 +1,230 @@
+#include "simple_serial_kyber512.h"
+#include "utilities.h"
+
+//static XUartLite UartLite; /* Instance of the UartLite Device */
+
+// Control & status registers
+// volatile int *KyberEnable = (int *)(S00_BASEADDR + KYBER512_CCAKEM_IP_S00_AXI_SLV_REG0_OFFSET);
+// volatile int *KyberReset = (int *)(S00_BASEADDR + KYBER512_CCAKEM_IP_S00_AXI_SLV_REG1_OFFSET);
+// volatile int *KyberStatus = (int *)(S00_BASEADDR + KYBER512_CCAKEM_IP_S00_AXI_SLV_REG6_OFFSET);
+// volatile int *encryptionDone = (int *)(S00_BASEADDR + KYBER512_CCAKEM_IP_S00_AXI_SLV_REG2_OFFSET);
+
+volatile int *kyberControlRegister = (int *)(XPAR_KYBER512_CCAKEM_MASK_0_S00_AXI_BASEADDR + KYBER512_CCAKEM_MASKED_IP_S00_AXI_SLV_REG0_OFFSET);
+volatile int *kyberStatusRegister = (int *)(XPAR_KYBER512_CCAKEM_MASK_0_S00_AXI_BASEADDR + KYBER512_CCAKEM_MASKED_IP_S00_AXI_SLV_REG1_OFFSET);
+
+// Data registers
+// volatile int *i_rand = (int *)(S01_BASEADDR + KYBER512_CCAKEM_IP_S01_AXI_SLV_REG0_OFFSET);
+// volatile int *i_publicKey = (int *)(S01_BASEADDR + KYBER512_CCAKEM_IP_S01_AXI_SLV_REG1_OFFSET);
+// volatile int *i_cipherText = (int *)(S01_BASEADDR + KYBER512_CCAKEM_IP_S01_AXI_SLV_REG2_OFFSET);
+// volatile int *i_secretKey = (int *)(S01_BASEADDR + KYBER512_CCAKEM_IP_S01_AXI_SLV_REG3_OFFSET);
+// volatile int *o_sharedSecretA = (int *)(S01_BASEADDR + KYBER512_CCAKEM_IP_S01_AXI_SLV_REG4_OFFSET);
+// volatile int *o_sharedSecretB = (int *)(S01_BASEADDR + KYBER512_CCAKEM_IP_S01_AXI_SLV_REG5_OFFSET);
+// volatile int *o_ciphertext = (int *)(S01_BASEADDR + KYBER512_CCAKEM_IP_S01_AXI_SLV_REG6_OFFSET);
+// volatile int *read_addr = (int *)(S01_BASEADDR + KYBER512_CCAKEM_IP_S01_AXI_SLV_REG7_OFFSET);
+
+volatile u32 *i_data_reg = (u32 *)(XPAR_KYBER512_CCAKEM_MASK_0_S01_AXI_BASEADDR + KYBER512_CCAKEM_MASKED_IP_S01_AXI_SLV_REG0_OFFSET);
+volatile u32 *i_memaddr_reg = (u32 *)(XPAR_KYBER512_CCAKEM_MASK_0_S01_AXI_BASEADDR + KYBER512_CCAKEM_MASKED_IP_S01_AXI_SLV_REG1_OFFSET);
+volatile u32 *o_ciphertext_reg = (u32 *)(XPAR_KYBER512_CCAKEM_MASK_0_S01_AXI_BASEADDR + KYBER512_CCAKEM_MASKED_IP_S01_AXI_SLV_REG2_OFFSET);
+volatile u32 *o_shared_secret_reg = (u32 *)(XPAR_KYBER512_CCAKEM_MASK_0_S01_AXI_BASEADDR + KYBER512_CCAKEM_IP_S01_AXI_SLV_REG3_OFFSET);
+volatile u32 *o_memaddr_reg = (u32 *)(XPAR_KYBER512_CCAKEM_MASK_0_S01_AXI_BASEADDR + KYBER512_CCAKEM_IP_S01_AXI_SLV_REG4_OFFSET);
+
+// Initialize device and test UART
+u8 platform_init()
+{
+  XUartLite UartLite; /* Instance of the UartLite Device */
+  int status;
+
+  /*
+   * Disable Data Cache
+   */
+  Xil_DCacheDisable();
+
+  /*
+   * Reset Kyber512 IP Core
+   */
+  device_reset(0);
+
+  /*
+   * Initialize the UartLite driver so that it is ready to use.
+   */
+  status = XUartLite_Initialize(&UartLite, UARTLITE_DEVICE_ID);
+  if (status != XST_SUCCESS)
+  {
+    return XST_FAILURE;
+  }
+
+  /*
+   * Perform a UartLite self-test to ensure that the hardware was built correctly.
+   */
+  status = XUartLite_SelfTest(&UartLite);
+  if (status != XST_SUCCESS)
+  {
+    return XST_FAILURE;
+  }
+  xil_printf("UART... OK\n\n\r");
+
+  xil_printf("======================================\n\r");
+  xil_printf("Kyber512 CCAKEM\n\r");
+  xil_printf("======================================\n\r");
+
+  return XST_SUCCESS;
+}
+
+// Reset Kyber512 IP Core
+//  Ignore input argument
+u8 device_reset(u32 _)
+{
+  // Clearing the reset enable bit resets the core
+  // xil_printf("Control Register: %08x\r\n", *kyberControlRegister);
+  *kyberControlRegister &= ~KYBER_RESET_MASK;
+  //  *kyberControlRegister |= KYBER_RESET_MASK;
+  // xil_printf("Control Register: %08x\r\n", *kyberControlRegister);
+
+  return XST_SUCCESS;
+}
+
+// Enable Kyber512 IP Core
+//  The device mode will determine the operation carried out
+//  Ignore input argument
+u8 device_enable(u32 _)
+{
+  // Writing to the device enable bit enables the operation
+  // xil_printf("Control Register: %08x\r\n", *kyberControlRegister);
+  *kyberControlRegister |= KYBER_ENABLE_MASK;
+  // *kyberControlRegister &= ~KYBER_ENABLE_MASK;
+  // xil_printf("Control Register: %08x\r\n", *kyberControlRegister);
+
+  return XST_SUCCESS;
+}
+
+// Set device operation mode: encaps/decaps
+//  0: encapsulation
+//  1: decapsulation
+u8 set_mode(u32 len)
+{
+  //  u8 status;
+  u8 RecvBuffer;
+  //  u8 mode;
+
+  // Receive byte from UART
+  // 	status = XUartLite_Recv(&UartLite, &RecvBuffer, len);
+  RecvBuffer = XUartLite_RecvByte(XPAR_AXI_UARTLITE_0_BASEADDR);
+
+  // If nothing received from UART buffer return early
+  if (RecvBuffer == '\n')
+    return XST_FAILURE;
+
+  // DEBUG:
+  // xil_printf("mode: %2x", hex_decode(RecvBuffer));
+  // xil_printf("Control Register: %08x\r\n", *kyberControlRegister);
+
+  if (hex_decode(RecvBuffer) == 0)
+    *kyberControlRegister = *kyberControlRegister & ~KYBER_MODE_MASK;
+  else
+    *kyberControlRegister = *kyberControlRegister | KYBER_MODE_MASK;
+
+  // xil_printf("Control Register: %08x\r\n", *kyberControlRegister);
+
+  // Assert termination byte character sequence and quit
+  RecvBuffer = XUartLite_RecvByte(XPAR_AXI_UARTLITE_0_BASEADDR);
+  if (RecvBuffer == '\n')
+    return XST_SUCCESS;
+  else
+    return XST_FAILURE;
+}
+
+// Write random seed or ciphertext inputs to Kyber512 IP Core
+// During encapsulation, write random seed. Write ciphertext for
+// decapsulation operation.
+u8 set_rand_bytes_ciphertext(u32 len)
+{
+  u8 status;
+
+  // Enable MEM Write
+  *kyberControlRegister ^= KYBER_I_MEM_A_WRITE_EN_MASK;
+
+  // DEBUG:
+  // xil_printf("Control Register: %08x\r\n", *kyberControlRegister);
+
+  // Write to MEM
+  status = uart_to_bram(i_data_reg, i_memaddr_reg, len);
+
+  // DEBUG:
+  // xil_printf("Control Register: %08x\r\n", *kyberControlRegister);
+
+  // Disable MEM Write
+  *kyberControlRegister ^= KYBER_I_MEM_A_WRITE_EN_MASK;
+
+  // DEBUG:
+  // xil_printf("Control Register: %08x\r\n", *kyberControlRegister);
+
+  // Send ACK
+  // simpleserial_put('z', 1, status);
+
+  return status;
+}
+
+// Write public key or secret key to Kyber512 IP Core
+// During encapsulation, write public key. Write secret key for
+// decapsulation operation.
+u8 set_public_key_secret_key(u32 len)
+{
+  u8 status;
+
+  // DEBUG:
+  // xil_printf("Receiving %d bytes\r\n", len);
+
+  // Enable MEM Write
+  *kyberControlRegister ^= KYBER_I_MEM_B_WRITE_EN_MASK;
+
+  // Write to MEM
+  status = uart_to_bram(i_data_reg, i_memaddr_reg, len);
+
+  // Disable MEM Write
+  *kyberControlRegister ^= KYBER_I_MEM_B_WRITE_EN_MASK;
+
+  // Send ACK
+  // simpleserial_put('z', 1, status);
+
+  return status;
+}
+
+// Read Ciphertext from Kyber512 IP Core.
+u8 get_ciphertext(u32 len)
+{
+  u8 status;
+
+  // DEBUG:
+  // xil_printf("Status Register: %08x\r\n", *kyberStatusRegister);
+
+  // Read Mem
+  status = bram_to_uart(o_ciphertext_reg, o_memaddr_reg, len, 0);
+
+  // Send ACK
+  // simpleserial_put('z', 1, status);
+
+  return status;
+}
+
+// Read Shared Secret from Kyber512 IP Core
+u8 get_shared_secret(u32 len)
+{
+  u8 status;
+
+  // DEBUG:
+  // xil_printf("Status Register: %08x\r\n", *kyberStatusRegister);
+
+  // Offset read address in decapsulation mode
+  u8 offset = (*kyberControlRegister & KYBER_MODE_MASK) ? 8 : 0;
+
+  // DEBUG:
+  // xil_printf("Offset: %d\r\n", offset);
+
+  // Read Mem
+  status = bram_to_uart(o_shared_secret_reg, o_memaddr_reg, len, offset);
+
+  // Send ACK
+  // simpleserial_put('z', 1, status);
+
+  return status;
+}

@@ -1,0 +1,7 @@
+#org-eclipse-ui-splash-progressText {
+  color: #1D1D1D;
+}
+
+#org-eclipse-ui-splash-progressPart {
+  background-image: url('me-custom:/platform:/plugin/com.xilinx.sdk.product/splash.bmp');
+}
